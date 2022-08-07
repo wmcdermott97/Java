@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "Java_a144b015"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${C:\\Users\\Campbell\\Documents\\VSCProgramming\\Java\\Hello.java}"
+        },
+        {
+            "type": "mix_task",
+            "request": "launch",
+            "name": "mix mats",
+            "task": "mats",
+            "taskArgs": [],
+            "projectDir": "C:\\Users\\Campbell\\Documents\\VSCProgramming\\Java_June_2022\\McDermottMatrixLib.exs"
+        }
+    ]
+}
