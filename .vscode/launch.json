@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Init",
+            "request": "launch",
+            "mainClass": "StaticBinaryTree.Init",
+            "projectName": "Java_a144b015"
+        },
+        {
+            "type": "java",
             "name": "Launch Hello",
             "request": "launch",
             "mainClass": "Hello",
