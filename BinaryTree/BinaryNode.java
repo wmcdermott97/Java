@@ -1,4 +1,4 @@
-package StaticBinaryTree;
+package BinaryTree;
 
 public class BinaryNode<T> {
     /**
