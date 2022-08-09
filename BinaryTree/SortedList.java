@@ -3,7 +3,7 @@ package BinaryTree;
 import java.util.Comparator;
 import java.lang.IndexOutOfBoundsException;
 
-public interface SortedListInterface<T> {
+public interface SortedList<T> {
     /**
      * Gets the comparator used to sort this BinaryTree.
      * 
@@ -40,7 +40,7 @@ public interface SortedListInterface<T> {
      * 
      * @throws IndexOutOfBoundsException If the index is not within the current size.
      * @param index 
-     * @return
+     * @return True if the element was removed, False otherwise.
      */
     public boolean remove(int index);
 
