@@ -2,7 +2,7 @@ package BinaryTree;
 
 import java.util.Comparator;
 
-public class BinaryTree<T> implements BinaryTreeInterface<T> {
+public class SortedTree<T> implements SortedListInterface<T> {
     
     private Comparator<T> organizer;
 
