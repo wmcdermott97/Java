@@ -10,7 +10,7 @@ public class SortedTree<T> implements SortedList<T> {
      * Place holder constructor to test SortedListTest.
      */
     public SortedTree() {
-        System.out.println("Starting up...");
+        // A lonely broken method.
     }
 
      /**
