@@ -5,16 +5,16 @@ import java.lang.IndexOutOfBoundsException;
 
 public interface SortedList<T> {
     /**
-     * Gets the comparator used to sort this BinaryTree.
+     * Gets the comparator used to sort this SortedList.
      * 
-     * @return The comparator used to order elements in this BinaryTree.
+     * @return The comparator used to order elements in this SortedList.
      */
     public Comparator<T> getComparator();
 
     /**
-     * Add some data to the BinaryTree.
+     * Add some data to the SortedList.
      * 
-     * @param data The data to add to this BinaryTree.
+     * @param data The data to add to this SortedList.
      */
     public void add(T data);
 
@@ -28,7 +28,7 @@ public interface SortedList<T> {
     public T get(int index);
 
     /**
-     * Removes one element from the BinaryTree, based on a provided element.
+     * Removes one element from the SortedList, based on a provided element.
      * 
      * @param data The element to attempt to remove.
      * @return True if the element was removed, False otherwise.
@@ -52,14 +52,14 @@ public interface SortedList<T> {
     public int size();
 
     /**
-     * Test whether the BinaryTree is empty or not.
+     * Test whether the SortedList is empty or not.
      * 
-     * @return True if there is no data in the BinaryTree, and False otherwise.
+     * @return True if there is no data in the SortedList, and False otherwise.
      */
     public boolean isEmpty();
 
     /**
-     * Remove all data from the BinaryTree.
+     * Remove all data from the SortedList.
      */
     public void clear();
 }

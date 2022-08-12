@@ -4,15 +4,14 @@ package BinaryTree;
  *  Test class for the SortedList Interface, filled with wonderful unit tests.
  */
 public class SortedListTest {
+
     /**
-     * The SortedList to test on. Will be reset between runs.
-     * 
-     * I chose to use Integers for simplicity, but it may be wise to try different types.
+     * The SortedList to test on. Reset to fixedList after every run.
      */
-    private SortedList<Integer> list;
+    private final SortedList<Integer> list;
     
     /**
-     * The number of tests in this class, because I may modify the code somehow to be less annoying looking.
+     * The number of tests in this class, which I am hardcoding.
      */
     private final int NUM_TESTS = 0;
 
@@ -23,6 +22,7 @@ public class SortedListTest {
      */ 
     public SortedListTest(SortedList<Integer> list) {
         this.list = list;
+        this.reset();
     }
 
     /**
@@ -32,25 +32,53 @@ public class SortedListTest {
      */
     public boolean getTestReport() {
         boolean target = true;
-        for (int testI = 0; testI < NUM_TESTS; testI++) {
-            System.out.println("Running test", testI);
-            target = target && this.getTestRun(testI, true);
-            // Running a test modifies the output, so we'll need to reset each time.
-            this.reset();
-        }
-        System.out.println("All tests passed: ", target);
+        // I should probably make this a loop, but I had some difficulty without using FunctionalInterfaces,
+        // as I'd have to somehow invoke different methods by name. A manual case statement could improve this.
+        boolean test = this.testSizeZero();
+        System.out.println("List can test for no size: ", test);
+        target = target && test;
+        reset();
+        // rinse and repeat. It's ugly, but it runs.
+        boolean test = this.testAddAny();
+        System.out.println("Testpassed: ", test);
+        target = target && test;
+        reset();
+
+        System.out.println("All unit tests passed: " + target);
         return target;
     }
 
     /**
-     * Runs a specific test by its integer id.
+     * Runs a test method by a numerical id.
+     * This method only exists so that I can loop over all tests.
      * 
-     * @param id The test to run in the sequence.
-     * @param verbose Whether or not to print the results of the test individually.
+     * @param id The numerical test to run by it's number.
+     * @return true if the test passes, false if it fails.
      */
-    public boolean getTestRun(int id, boolean verbose) {
-        // TODO
-        return false;
+    private boolean runTestMethodById(int id) {
+        
+    }
+
+    /**
+     * Test the isEmpty() method
+     * 
+     * @return true if the test passes, false if it fails.
+     */
+    public boolean testSizeZero() {
+        boolean target = list.isEmpty(); // should return true
+        list.reset();
+        return target;
+    }
+
+    /**
+     * Test the add method for some element.
+     * 
+     * @return true if the list can add an element, false if it fails.
+     */
+    public boolean testAddAny() {
+        list.add(3);
+
+        this.reset();
     }
 
     /**

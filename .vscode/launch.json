@@ -5,6 +5,13 @@
             "name": "Launch Init",
             "request": "launch",
             "mainClass": "BinaryTree.Init",
+            "projectName": "Java_95866b48"
+        },
+        {
+            "type": "java",
+            "name": "Launch Init",
+            "request": "launch",
+            "mainClass": "BinaryTree.Init",
             "projectName": "Java_a144b015"
         },
         {
