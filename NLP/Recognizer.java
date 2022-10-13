@@ -44,7 +44,7 @@ public class Recognizer {
         CharNode currNode = this.root;
         for (char c : word.toCharArray()) {
             currNode = currNode.getNode(c);
-            if (c == null) {
+            if (currNode == null) {
                 return false;
             }
         }
