@@ -10,11 +10,15 @@ public class Recognizer {
     /**
      * Root node for the trie.
      */
-    private MultiNode<Character> root;
+    private CharNode root;
 
     public Recognizer() {
-        this.name = "default";
-        this.root = new MultiNode<Character>();
+        this("default");
+    }
+
+    public Recognizer(String name) {
+        this.name = name;
+        this.root = new CharNode(' ');
     }
 
     /**
@@ -23,13 +27,13 @@ public class Recognizer {
     public void parse(String[] words) {
         for (String word : words) {
             char[] currWord = (word + " ").toCharArray();
-            MultiNode<Character> currNode = this.root;
-            for (char ch : currWord) {
-                MultiNode<Character> nextNode = currNode.getNode(ch);
+            CharNode currNode = this.root;
+            for (char c : currWord) {
+                CharNode nextNode = currNode.getNode(c);
                 // Create a new character in the trie
-                if (!nextNode) {
-                    MultiNode<Character> nextNode = new MultiNode<Character>(ch)
-                    currNode.addNode(nextNode);
+                if (nextNode == null) {
+                    nextNode = new CharNode(c);
+                    currNode.setNode(nextNode);
                 }
                 currNode = nextNode;
             }
