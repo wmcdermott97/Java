@@ -40,7 +40,7 @@ public class Recognizer {
         }
     }
 
-    public boolean validate(String word) {
+    public boolean recognize(String word) {
         CharNode currNode = this.root;
         for (char c : word.toCharArray()) {
             currNode = currNode.getNode(c);
