@@ -39,4 +39,15 @@ public class Recognizer {
             }
         }
     }
+
+    public boolean validate(String word) {
+        CharNode currNode = this.root;
+        for (char c : word.toCharArray()) {
+            currNode = currNode.getNode(c);
+            if (c == null) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
