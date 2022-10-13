@@ -7,7 +7,7 @@ public class SortedTree<T> implements SortedList<T> {
     private Comparator<T> order;
 
     /**
-     * Place holder constructor to test SortedListTest.
+     * Place holder constructor for SortedListTest.
      */
     public SortedTree() {
         // A lonely broken method.
