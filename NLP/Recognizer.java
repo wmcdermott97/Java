@@ -42,12 +42,12 @@ public class Recognizer {
 
     public boolean recognize(String word) {
         CharNode currNode = this.root;
-        for (char c : word.toCharArray()) {
+        for (char c : (word + " ").toCharArray()) {
             currNode = currNode.getNode(c);
             if (currNode == null) {
                 return false;
             }
         }
-        return true;
+        return currNode.getData() == ' ';
     }
 }

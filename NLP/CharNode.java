@@ -14,6 +14,10 @@ public class CharNode {
         this.values = new ArrayList<CharNode>();
     }
 
+    public char getData() {
+        return this.data;
+    }
+
     /**
      *  Sets a node, or overwrites an existing node if it already exists.
      */

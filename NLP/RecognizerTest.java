@@ -19,7 +19,15 @@ public class RecognizerTest {
             }
             targ = targ && test;
         }
+        testWord("a");
+        testWord("");
+        testWord("arbo");
+        testWord("arbor ");
         return targ;
+    }
+
+    private void testWord(String word) {
+        System.out.println(word + " was recognized:" + rcg.recognize(word));
     }
     
 }
